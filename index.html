@@ -26,12 +26,20 @@
     var yourName = prompt("What is your name?");
 
 //Check if user has imputed a name If so proceed to say hello, if not alert user to enter name next time
+    
 if(yourName != null){
     document.getElementById("sayHello").innerHTML = "Hello " + yourName;
 } else{
     alert("Please Enter a name next time");
 }
-    
+
+/****Variables can't start with number or contain spaces **/
+var myName ="Allan";
+var myName = 100;
+//Don't need to instatiate type. it recognizes it automatically
+var myAge = 40;
+
+
     
 </script>      
       
