@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset = "utf-8">
+        <script src= "jstut.js"></script>
+    
+    <style type="text/css">
+      body {font-size: 1.6em;}
+      .hidden {display:none;}
+      .show {display:inline !important;}
+      button {
+        border: 2px solid black; background: #E5E4E2;
+        font-size: .5em; font-weight: bold; color: black;
+        padding: .8em 2em;
+        margin-top: .4em;
+      }
+    </style>
+ 
+  </head>
+  <body> 
+  <!--Simple prompting on screen -->
+  <p id="sayHello"></p>   
+
+<script>
+    //Prompts user to enter name -->
+    var yourName = prompt("What is your name?");
+
+//Check if user has imputed a name If so proceed to say hello, if not alert user to enter name next time
+if(yourName != null){
+    document.getElementById("sayHello").innerHTML = "Hello " + yourName;
+} else{
+    alert("Please Enter a name next time");
+}
+    
+    
+</script>      
+      
+      
+  </body>
+
+
+
+</html>
