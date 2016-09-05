@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Oriented JavaScript</title>
+</head>
+<body>
+<script type = "text/javascript">
+
+//Basic Javascript object properties and a method    
+var customer = {
+    name: "Allan Wong",
+    speak: function(){
+    
+    //This allows a reference to the object's value without knowing the objects name(name)
+    return "My name is "+ this.name;
+    },
+    
+    //objects can contain other objects
+    address: {
+        street: '1617 Sagewood Ave',
+        city: "San Leandro",
+        state: "CA"
+    }
+};
+
+   
+document.write(customer.speak()+  "<br />");
+
+//Access properties and object properties by going object#1.object2.property    
+document.write(customer.name + "lives at " + customer.address.street + "<br />");
+
+//Can also add properties
+customer.address.country = "US";
+document.write(customer.address.country + "<br />");
+
+// Creating multiple objects of the same type with Constructor
+// Functions. Constructors provide the functions that classes
+// provide in other languages
+function Person(name, street) {
+    //This allows us to refer to an object even though we do not know its name yet before its created
+    this.name = name;
+    this.street = street;
+    this.info = function(){
+        return "My name is "+ this.name "and I live on " + this.street;
+    }
+}
+
+    
+    
+    
+    
+    
+    
+    
+</script>
+    
+    
+    
+    
+    
+</body>
+</html>
