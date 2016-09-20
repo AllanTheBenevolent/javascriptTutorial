@@ -46,8 +46,25 @@ function Person(name, street) {
     }
 }
 
+var bobSmith = new Person("Bob Smith", "234 main st");
+
+document.write(bobSmith.info() + "<br />");
+
+document.write("Bob is a Person" + (bobSmith instanceof Person) + "<br />");
+
+function changeName(person){
+    person.name = "Sue Smith";
+}
+//change the name with the function.
+changeName(bobSmith);
+
+// Objects are only equal if they reference the same object
+var person1 = new Person("Paul", "123 Main");
+var person2 = new Person("Paul", "123 Main");
+ 
+document.write("Are they equal " + (person1 == person2) + "<br />");
     
-    
+
     
     
     

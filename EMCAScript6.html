@@ -1,0 +1,308 @@
+<html>
+<head>
+<title>OO Javascript</title>
+    </head>
+<body>
+<script type = "text/javascript">
+
+
+// ECMAScript 6 OOP with JavaScript
+
+// ----- Method Notation in Object Property Definitions -----
+
+// EC5 WAY
+var addStuff = {
+  sum: function(num1, num2){
+    return num1 + num2;
+  }
+};
+
+document.write("1 + 2 = ", addStuff.sum(1,2) + "<br />");
+
+
+// EC6 WAY
+var addStuff = {
+  sum(num1, num2){
+    return num1 + num2;
+  }
+}
+
+document.write("1 + 2 = ", addStuff.sum(1,2) + "<br />");
+
+// ----- CLASSES IN JAVASCRIPT -----
+
+// EC5 WAY
+var Point = function(xPos, yPos){
+  this.xPos = xPos;
+  this.yPos = yPos;
+};
+
+Point.prototype.getPos = function(){
+  return "X: " + this.xPos + " Y: " + this.yPos;
+};
+
+var point = new Point(100, 200);
+
+document.write("Point Pos : " + point.getPos() + "<br />");
+
+// EC6 WAY
+class Point {
+  constructor(xPos, yPos){
+    this.xPos = xPos;
+    this.yPos = yPos;
+  }
+
+  getPos(){
+    return "X: " + this.xPos + " Y: " + this.yPos;
+  }
+}
+
+var point = new Point(100,200);
+
+document.write("Point Pos : " + point.getPos() + "<br />");
+
+// ----- MORE OOP IN JAVASCRIPT -----
+
+// EC6 WAY
+class Animal {
+  constructor(name){
+    this.name = name;
+  }
+
+  toString(){
+    return "Animal is named " + this.name;
+  }
+
+  // We can create static functions as well
+  static getAnimal(){
+    return new Animal("No Name");
+  }
+
+}
+
+class Dog extends Animal{
+  constructor(name, owner){
+
+    // We can call the super class now
+    super(name);
+    this.owner = owner;
+  }
+
+  toString(){
+
+    // You can call super class methods as well
+    return super.toString() + "<br />Dog is named " + this.name;
+  }
+}
+
+var rover = new Dog("Rover", "Paul");
+
+document.write(rover.name + " is owned by " + rover.owner + "<br />");
+
+document.write(rover.toString() + "<br />");
+
+// Call the static function
+var bowser = Animal.getAnimal();
+document.write("Bowser info : " + bowser.toString() + "<br />");
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+// ECMAScript 6 OOP with JavaScript
+ 
+// ----- Method Notation in Object Property Definitions -----
+ 
+// EC5 WAY
+var addStuff = {
+  sum: function(num1, num2){
+    return num1 + num2;
+  }
+};
+ 
+document.write("1 + 2 = ", addStuff.sum(1,2) + "<br />");
+ 
+ 
+// EC6 WAY
+var addStuff = {
+  sum(num1, num2){
+    return num1 + num2;
+  }
+}
+ 
+document.write("1 + 2 = ", addStuff.sum(1,2) + "<br />");
+ 
+// ----- CLASSES IN JAVASCRIPT -----
+ 
+// EC5 WAY
+var Point = function(xPos, yPos){
+  this.xPos = xPos;
+  this.yPos = yPos;
+};
+ 
+Point.prototype.getPos = function(){
+  return "X: " + this.xPos + " Y: " + this.yPos;
+};
+ 
+var point = new Point(100, 200);
+ 
+document.write("Point Pos : " + point.getPos() + "<br />");
+ 
+// EC6 WAY
+class Point {
+  constructor(xPos, yPos){
+    this.xPos = xPos;
+    this.yPos = yPos;
+  }
+ 
+  getPos(){
+    return "X: " + this.xPos + " Y: " + this.yPos;
+  }
+}
+ 
+var point = new Point(100,200);
+ 
+document.write("Point Pos : " + point.getPos() + "<br />");
+ 
+// ----- MORE OOP IN JAVASCRIPT -----
+ 
+// EC6 WAY
+class Animal {
+  constructor(name){
+    this.name = name;
+  }
+ 
+  toString(){
+    return "Animal is named " + this.name;
+  }
+ 
+  // We can create static functions as well
+  static getAnimal(){
+    return new Animal("No Name");
+  }
+ 
+}
+ 
+class Dog extends Animal{
+  constructor(name, owner){
+ 
+    // We can call the super class now
+    super(name);
+    this.owner = owner;
+  }
+ 
+  toString(){
+ 
+    // You can call super class methods as well
+    return super.toString() + "<br />Dog is named " + this.name;
+  }
+}
+ 
+var rover = new Dog("Rover", "Paul");
+ 
+document.write(rover.name + " is owned by " + rover.owner + "<br />");
+ 
+document.write(rover.toString() + "<br />");
+ 
+// Call the static function
+var bowser = Animal.getAnimal();
+document.write("Bowser info : " + bowser.toString() + "<br />");    
+    
+</script>    
+    
+</body>
+    
+</html>
